@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>my project</title>
+</head>
+<body>
+    {% block content %}
+    
+    <h1>Here , my django project guys</h1>
+    {% for chai in chais %}
+    <div class="class-item">
+     <img src="{{chai.image.url}}" alt="">
+     <h1>{{chai.name}}</h1>
+     <h2>{{chai.date_added}}</h2>
+    </div>
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>

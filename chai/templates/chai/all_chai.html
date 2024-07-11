@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaiii</title>
+</head>
+<style>
+    .body{
+     color: blueviolet;
+     
+
+    }
+    .class-item img{
+      width: 200px;
+    }
+    button{
+        width: 55px;
+        height: 30px;
+        color: blue;
+     background-color: lightblue;
+     margin-left: 70px;
+    }
+</style>
+<body>
+    <h1>here, my create app called chai</h1>
+{% block content %}
+{% for chai in chais %}
+<div class="class-item">
+ <img src="{{chai.image.url}}" alt="">
+ <h1>{{chai.name}}</h1>
+ <h2>{{chai.date_added}}</h2>
+</div>
+<a href="{% url 'chai_detail' chai.id %}">
+<button> {{chai.type}} {{chai.id}}</button>
+</a>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

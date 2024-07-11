@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaii detail page
+        
+    </title>
+    <style>
+        body{
+            background-color: rgb(187, 151, 221);
+        }
+        img{
+            width: 200px;
+        }
+        button{
+        width: 55px;
+        height: 30px;
+        color: blue;
+     background-color: lightblue;
+     margin-left: 70px;
+    }
+    </style>
+</head>
+<body>
+    <h1>chai detail page</h1>
+    <div>
+        {% block content %}
+       
+        <img src="{{chai.image.url}}" alt="">
+              <p>{{chai.description}}</p>
+              <h3>{{chai.price}}</h3>
+         <a href="{% url 'all_chai' %}">
+            <button>back</button>
+         </a>
+    </div>
+    {% endblock %}
+</body>
+</html>
